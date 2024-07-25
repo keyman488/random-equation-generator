@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="generateplus(), generateminus(), generatetimes(), generatedivide()">Click to generate a random equation between 0 and 100</button>
+
+    <p id="equation"></p>
+    <p id="equationResult"></p>
+
+    <p id="minusequation"></p>
+    <p id="minusequationResult"></p>
+
+    <p id="timesequation"></p>
+    <p id="timesequationResult"></p>
+
+    <p id="divideequation"></p>
+    <p id="divideequationResult"></p>
+
+    <script>
+        
+
+        function generateplus(a, b) {
+         a = Math.floor(Math.random()*101);
+         b = Math.floor(Math.random()*101); 
+         c = a + b;
+
+        document.getElementById("equation").innerHTML = a + " + " + b + " = ";
+        document.getElementById("equationResult").innerHTML = c;
+        }
+        
+        function generateminus(d, e) {
+         d = Math.floor(Math.random()*101);
+         e = Math.floor(Math.random()*101); 
+         f = d - e;
+
+        document.getElementById("minusequation").innerHTML = d + " - " + e + " = ";
+        document.getElementById("minusequationResult").innerHTML = f;
+        }
+       
+        function generatetimes(g, h) {
+         g = Math.floor(Math.random()*101);
+         h = Math.floor(Math.random()*101); 
+         i = g * h;
+
+        document.getElementById("timesequation").innerHTML = g + " * " + h + " = ";
+        document.getElementById("timesequationResult").innerHTML = i;
+        }
+
+        function generatedivide(j, k) {
+         j = Math.floor(Math.random()*101);
+         k = Math.floor(Math.random()*101); 
+         l = j / k;
+
+        document.getElementById("divideequation").innerHTML = j + " / " + k + " = ";
+        document.getElementById("divideequationResult").innerHTML = l;
+        }
+
+    </script>
+</body>
+</html>
