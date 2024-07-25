@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Type any yes or no question and the computer will either say yes or no randomly.</p>
+
+    <input type="text" required>
+    <button onclick="submit()">Submit</button>
+    <br>
+    <br>
+    <h1>computer says: <span id="answer"></span></h1>
+
+    
+
+    <script>
+        function submit() {
+            let computerAnswer = Math.floor(Math.random()*2);
+
+            if (computerAnswer == 0) {
+                document.getElementById("answer").innerHTML = 'No';
+            } else if (computerAnswer == 1) {
+                document.getElementById("answer").innerHTML = 'Yes';
+            }
+        }
+
+        function delAnswer() {
+            document.getElementById("answer").innerHTML = '';
+        }
+    </script>
+</body>
+</html>
