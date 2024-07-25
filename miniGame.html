@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {
+            position: absolute;
+            left: 500px;
+            top: 460px;
+        }
+
+        .container button:nth-child(1) {
+            position: absolute;
+            top: -40px;
+            left: 70px;
+            background-color: yellow;
+            color: white;
+        }
+
+        .container button:nth-child(2) {
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            background-color: green;
+            color: white;
+        }
+
+        .container .right-btn {
+            position: absolute;
+            left: 120px;
+            background-color: blue;
+            color: white;
+        }
+
+        .container .left-btn {
+            color: white;
+            background-color: red;
+        }
+
+        #up {
+            position: absolute;
+            left: 500px;
+            top: 100px;
+            border: 2px solid black;
+            width: 40px;
+            background-color: yellow;
+        }
+
+        #down {
+            position: absolute;
+            left: 500px;
+            top: 180px;
+            border: 2px solid black;
+            width: 40px;
+            background-color: green;
+        }
+
+        #right {
+            position: absolute;
+            left: 580px;
+            top: 140px;
+            border: 2px solid black;
+            width: 40px;
+            background-color: blue;
+        }
+
+        #left {
+            position: absolute;
+            left: 420px;
+            top: 140px;
+            border: 2px solid black;
+            background-color: red;
+            width: 40px;
+        }
+
+        #up, #down, #left, #right {
+            color: white;
+        }
+
+        .container button {
+            box-shadow: 2px 2px 2px 2px black;
+            border: 2px solid black;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        .reset {
+            background-color: indigo;
+            color: red;
+            border: 2px solid black;
+            box-shadow: 2px 2px 2px 2px black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="resetUp(), resetDown(), resetLeft(), resetRight()" class="reset">RESET</button>
+    <p id="up"></p>
+    <p id="down"></p>
+    <p id="right"></p>
+    <p id="left"></p>
+    <div class="container">
+    <button onclick="upBtn(), delDownUp(), delRightUp(), delLeftUp()">UP</button>
+    <button onclick="downBtn(), delUpDown(), delRightDown(), delLeftDown()">DOWN</button>
+    <button onclick="rightBtn(), delUpRight(), delDownRight(), delLeftRight()" class="right-btn">RIGHT</button>
+    <button onclick="leftBtn(), delUpLeft(), delDownLeft(), delRightLeft()" class="left-btn">LEFT</button>
+    </div>
+
+    <script>
+
+        // UP Button
+        function upBtn() {
+            document.getElementById("up").innerHTML = "YOU";
+        }
+
+        function delDownUp() {
+            document.getElementById("down").innerHTML = "";
+        }
+
+        function delRightUp() {
+            document.getElementById("right").innerHTML = "";
+        }
+
+        function delLeftUp() {
+            document.getElementById("left").innerHTML = "";
+        }
+
+        // DOWN Button
+        function downBtn() {
+            document.getElementById("down").innerHTML = "YOU";
+        }
+
+        function delUpDown() {
+            document.getElementById("up").innerHTML = "";
+        }
+
+        function delRightDown() {
+            document.getElementById("right").innerHTML = "";
+        }
+
+        function delLeftDown() {
+            document.getElementById("left").innerHTML = "";
+        }
+
+        // RIGHT Button
+        function rightBtn() {
+            document.getElementById("right").innerHTML = "YOU";
+        }
+
+        function delLeftRight() {
+            document.getElementById("left").innerHTML = "";
+        }
+
+        function delUpRight() {
+            document.getElementById("up").innerHTML = "";
+        }
+
+        function delDownRight() {
+            document.getElementById("down").innerHTML = "";
+        }
+
+        // LEFT Button
+        function leftBtn() {
+            document.getElementById("left").innerHTML = "YOU";
+        }
+
+        function delRightLeft() {
+            document.getElementById("right").innerHTML = "";
+        }
+
+        function delDownLeft() {
+            document.getElementById("down").innerHTML = "";
+        }
+
+        function delUpLeft() {
+            document.getElementById("up").innerHTML = "";
+        }
+
+        // RESET Button
+        function resetDown() {
+            document.getElementById("down").innerHTML = "";
+        }
+
+        function resetLeft() {
+            document.getElementById("left").innerHTML = "";
+        }
+
+        function resetRight() {
+            document.getElementById("right").innerHTML = "";
+        }
+
+        function resetUp() {
+            document.getElementById("up").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
